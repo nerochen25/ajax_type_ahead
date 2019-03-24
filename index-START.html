@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Type Ahead 👀</title>
+  <title>🇺🇸 City Search</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,7 +26,7 @@ function findMatches(wordToMatch, cities) {
   return cities.filter(place => {
 
     const regex = new RegExp(wordToMatch, 'gi');
-    return place.city.match(regex) || place.city.match(regex)
+    return place.city.match(regex) || place.state.match(regex)
   })
 }
 
@@ -36,8 +36,8 @@ function displayMatches() {
     const regex = new RegExp(this.value, 'gi');
     const cityName = place.city.replace(regex, `<span class='hl'>${this.value}</span>`);
     const stateName = place.state.replace(regex, `<span class='hl'>${this.value}</span>`)
-    cityForLink = place.city.split(' ').join('_');
-    stateForLink = place.state.split(' ').join('_');    
+    const cityForLink = place.city.split(' ').join('_');
+    const stateForLink = place.state.split(' ').join('_');    
     return `
       <li>
         <a href='https://en.wikipedia.org/wiki/${cityForLink},_${stateForLink}'>Visit</a>
