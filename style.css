@@ -80,8 +80,8 @@ span.population {
   align-items: center;
   text-align: center;
   font-family: 'Comfortaa', cursive;
-  color: #757575;
-  font-size: 50pt;
+  color: #757575ba;
+  font-size: 80pt;
 }
 
 /* input:focus {
