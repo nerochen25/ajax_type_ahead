@@ -84,6 +84,7 @@ span.population {
   font-size: 80pt;
 }
 
-/* input:focus {
-  color: #757575;
-} */
+.visit-link {
+  color: #ffc600;
+  text-decoration: none;
+}
