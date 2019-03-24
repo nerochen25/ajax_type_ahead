@@ -86,5 +86,24 @@ span.population {
 
 .visit-link {
   color: #ffc600;
+}
+
+#github-logo {
+  width: 60px;
+}
+
+#linkedin-logo {
+  width: 60px;
+};
+
+#github-linkedin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 150px; */
+  text-align: center;
+}
+
+#github {
   text-decoration: none;
 }
