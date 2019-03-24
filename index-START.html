@@ -36,9 +36,11 @@ function displayMatches() {
     const regex = new RegExp(this.value, 'gi');
     const cityName = place.city.replace(regex, `<span class='hl'>${this.value}</span>`);
     const stateName = place.state.replace(regex, `<span class='hl'>${this.value}</span>`)
-
+    cityForLink = place.city.split(' ').join('_');
+    stateForLink = place.state.split(' ').join('_');    
     return `
       <li>
+        <a href='https://en.wikipedia.org/wiki/${cityForLink},_${stateForLink}'>Visit</a>
         <span class='name'>${place.city}, ${place.state}</span>
         <span class='population'>${place.population}</span>
       </li>
